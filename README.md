@@ -1,13 +1,10 @@
 <div align="center">
-<img src="1.png" height="auto" width="400" />
+<img src="1.png" height="auto" width="auto" />
 <br />
 <h1>traceGit</h1>
 <p>
 a chrome extension to track contributions to github organizations
 </p>
-<a href="https://github.com/iamrajiv/tracegit/network/members"><img src="https://img.shields.io/github/forks/iamrajiv/tracegit?color=0969da&style=flat-square" height="auto" width="auto" /></a>
-<a href="https://github.com/iamrajiv/tracegit/stargazers"><img src="https://img.shields.io/github/stars/iamrajiv/tracegit?color=0969da&style=flat-square" height="auto" width="auto" /></a>
-<a href="https://github.com/iamrajiv/tracegit/blob/main/LICENSE"><img src="https://img.shields.io/github/license/iamrajiv/tracegit?color=0969da&style=flat-square" height="auto" width="auto" /></a>
 </div>
 
 ## About
