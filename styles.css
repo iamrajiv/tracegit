@@ -1,0 +1,295 @@
+.tracegit-widget {
+  margin: 0;
+  padding: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica,
+    Arial, sans-serif;
+  background: transparent;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  max-width: none;
+  width: auto;
+}
+
+.tracegit-container {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  max-width: none;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.tracegit-header {
+  display: none;
+}
+
+.tracegit-icon {
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+.tracegit-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #24292f;
+}
+
+.tracegit-stats {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  margin-top: 0;
+  align-items: center;
+}
+
+.tracegit-stat {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1f2328;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  position: relative;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  line-height: 1.5;
+}
+
+.tracegit-stat:hover {
+  color: #24292f;
+}
+
+.tracegit-stat:focus {
+  color: #24292f;
+  outline: none;
+}
+
+.tracegit-stat-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  flex-shrink: 0;
+  color: inherit;
+  fill: currentColor;
+}
+
+.tracegit-stat-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tracegit-stat-label {
+  color: inherit;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.tracegit-stat-value {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #1f2328;
+  background-color: rgba(175, 184, 193, 0.2);
+  border-radius: 2em;
+  line-height: 1;
+}
+
+.tracegit-message {
+  color: #656d76;
+  font-size: 13px;
+  font-style: italic;
+  text-align: center;
+  padding: 8px;
+}
+
+.tracegit-message a {
+  color: #0969da;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tracegit-message a:hover {
+  text-decoration: underline;
+  color: #0550ae;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tracegit-stat {
+    color: #7d8590;
+  }
+
+  .tracegit-stat:hover {
+    color: #f0f6fc;
+  }
+
+  .tracegit-stat:focus {
+    color: #f0f6fc;
+  }
+
+  .tracegit-stat-value {
+    color: #f0f6fc;
+    background-color: rgba(110, 118, 129, 0.4);
+  }
+
+  .tracegit-message {
+    color: #7d8590;
+  }
+
+  .tracegit-message a {
+    color: #4493f8;
+  }
+
+  .tracegit-message a:hover {
+    color: #58a6ff;
+  }
+}
+
+[data-color-mode="dark"] .tracegit-stat,
+[data-theme="dark"] .tracegit-stat {
+  color: #7d8590;
+}
+
+[data-color-mode="dark"] .tracegit-stat:hover,
+[data-theme="dark"] .tracegit-stat:hover {
+  color: #f0f6fc;
+}
+
+[data-color-mode="dark"] .tracegit-stat:focus,
+[data-theme="dark"] .tracegit-stat:focus {
+  color: #f0f6fc;
+}
+
+[data-color-mode="dark"] .tracegit-stat-value,
+[data-theme="dark"] .tracegit-stat-value {
+  color: #f0f6fc;
+  background-color: rgba(110, 118, 129, 0.4);
+}
+
+[data-color-mode="dark"] .tracegit-message,
+[data-theme="dark"] .tracegit-message {
+  color: #7d8590;
+}
+
+[data-color-mode="dark"] .tracegit-message a,
+[data-theme="dark"] .tracegit-message a {
+  color: #4493f8;
+}
+
+[data-color-mode="dark"] .tracegit-message a:hover,
+[data-theme="dark"] .tracegit-message a:hover {
+  color: #58a6ff;
+}
+
+@media (max-width: 1200px) {
+  .tracegit-stat {
+    padding: 6px 10px;
+  }
+
+  .tracegit-stat-label {
+    font-size: 13px;
+  }
+
+  .tracegit-stat-value {
+    min-width: 18px;
+    height: 18px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tracegit-stats {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .tracegit-stat {
+    padding: 6px 8px;
+  }
+
+  .tracegit-stat-label {
+    font-size: 12px;
+  }
+
+  .tracegit-stat-value {
+    min-width: 16px;
+    height: 16px;
+    font-size: 10px;
+    padding: 0 4px;
+  }
+
+  .tracegit-stat-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+  }
+
+  .tracegit-stat-content {
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tracegit-stats {
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-start;
+  }
+
+  .tracegit-stat {
+    padding: 4px 6px;
+    width: 100%;
+  }
+
+  .tracegit-stat-label {
+    font-size: 11px;
+  }
+
+  .tracegit-stat-value {
+    min-width: 14px;
+    height: 14px;
+    font-size: 9px;
+    padding: 0 3px;
+  }
+
+  .tracegit-stat-icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+  }
+
+  .tracegit-stat-content {
+    gap: 4px;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.tracegit-container:has(.tracegit-message:contains("Loading")) {
+  animation: pulse 1.5s ease-in-out infinite;
+}

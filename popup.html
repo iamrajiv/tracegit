@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        width: 360px;
+        min-height: 500px;
+        padding: 0;
+        margin: 0;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica,
+          Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        font-size: 14px;
+        line-height: 1.5;
+        color: #1f2328;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 320px;
+        padding: 32px 24px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: calc(100vh - 64px);
+        box-sizing: border-box;
+        margin: auto;
+      }
+
+      .Header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 24px;
+        margin-top: 0;
+        gap: 8px;
+        flex-shrink: 0;
+      }
+
+      .Header-item {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1f2328;
+        margin: 0;
+      }
+
+      .Flash {
+        padding: 12px 16px;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        border-radius: 6px;
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .Flash--success {
+        color: #1a7f37;
+        background-color: #dafbe1;
+        border-color: #4ac26b;
+      }
+
+      .Flash--warning {
+        color: #9a6700;
+        background-color: #fff8c5;
+        border-color: #d1cc33;
+      }
+
+      .FormControl {
+        margin-bottom: 16px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .FormControl-label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+        font-size: 14px;
+        color: #1f2328;
+        text-align: center;
+      }
+
+      .FormControl-input {
+        display: block;
+        width: 100%;
+        padding: 5px 12px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #1f2328;
+        vertical-align: middle;
+        background-color: #ffffff;
+        background-repeat: no-repeat;
+        background-position: right 8px center;
+        border: 1px solid #d1d9e0;
+        border-radius: 6px;
+        outline: none;
+        box-shadow: inset 0 1px 0 rgba(208, 215, 222, 0.2);
+        box-sizing: border-box;
+      }
+
+      .FormControl-input:focus {
+        border-color: #0969da;
+        outline: none;
+        box-shadow:
+          inset 0 1px 0 rgba(208, 215, 222, 0.2),
+          0 0 0 3px rgba(9, 105, 218, 0.3);
+      }
+
+      .FormControl-input[readonly] {
+        background-color: #f6f8fa;
+        color: #656d76;
+      }
+
+      .btn {
+        position: relative;
+        display: inline-block;
+        padding: 8px 16px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        user-select: none;
+        border: 1px solid;
+        border-radius: 6px;
+        appearance: none;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        min-height: 36px;
+      }
+
+      .btn-primary {
+        color: #ffffff;
+        background-color: #1f883d;
+        border-color: rgba(31, 136, 61, 0.4);
+        box-shadow:
+          0 1px 0 rgba(31, 136, 61, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      }
+
+      .btn-primary:hover {
+        background-color: #1a7f37;
+        border-color: rgba(31, 136, 61, 0.4);
+      }
+
+      .btn-primary:disabled {
+        color: rgba(255, 255, 255, 0.8);
+        background-color: #94d3a2;
+        border-color: rgba(31, 136, 61, 0.4);
+        cursor: not-allowed;
+      }
+
+      .btn-danger {
+        color: #ffffff;
+        background-color: #d1242f;
+        border-color: rgba(209, 36, 47, 0.4);
+        box-shadow:
+          0 1px 0 rgba(209, 36, 47, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 0.03);
+        margin-top: 12px;
+      }
+
+      .btn-danger:hover {
+        background-color: #a40e26;
+        border-color: rgba(209, 36, 47, 0.4);
+      }
+
+      .text-small {
+        font-size: 12px;
+        line-height: 1.4;
+        color: #656d76;
+        margin-bottom: 12px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .Link {
+        color: #0969da;
+        text-decoration: none;
+      }
+
+      .Link:hover {
+        text-decoration: underline;
+      }
+
+      .text-danger {
+        color: #d1242f;
+        font-size: 12px;
+        margin-top: 6px;
+      }
+
+      .header-icon {
+        display: inline-block;
+        vertical-align: text-top;
+        margin-right: 8px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #0d1117;
+          color: #f0f6fc;
+        }
+
+        .FormControl-input {
+          background-color: #21262d;
+          border-color: #30363d;
+          color: #f0f6fc;
+        }
+
+        .FormControl-input:focus {
+          border-color: #1f6feb;
+          box-shadow:
+            inset 0 1px 0 rgba(48, 54, 61, 0.2),
+            0 0 0 3px rgba(31, 111, 235, 0.3);
+        }
+
+        .FormControl-input[readonly] {
+          background-color: #161b22;
+          color: #8b949e;
+        }
+
+        .FormControl-label {
+          color: #f0f6fc;
+        }
+
+        .text-small {
+          color: #8b949e;
+        }
+
+        .Header-item {
+          color: #f0f6fc;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="Header">
+        <img
+          src="icons/tracegit.png"
+          alt="traceGit"
+          width="20"
+          height="20"
+          class="header-icon"
+        />
+        <h1 class="Header-item">traceGit</h1>
+      </div>
+
+      <div id="status" class="Flash Flash--warning">
+        Not connected to GitHub
+      </div>
+
+      <div id="setup-form">
+        <div class="FormControl">
+          <label class="FormControl-label" for="pat-input"
+            >GitHub Personal Access Token</label
+          >
+          <div class="text-small">
+            Create a token at
+            <a
+              class="Link"
+              href="https://github.com/settings/tokens"
+              target="_blank"
+              >GitHub Settings</a
+            >
+            with 'read:org' and 'read:user' permissions.
+          </div>
+          <input
+            class="FormControl-input"
+            type="password"
+            id="pat-input"
+            placeholder="ghp_xxxxxxxxxxxxxxxx"
+          />
+          <div
+            id="error-message"
+            class="text-danger"
+            style="display: none"
+          ></div>
+        </div>
+
+        <button class="btn btn-primary" id="save-btn">Save Token</button>
+      </div>
+
+      <div id="connected-view" style="display: none">
+        <div class="FormControl">
+          <label class="FormControl-label">Connected as:</label>
+          <input class="FormControl-input" type="text" id="username" readonly />
+        </div>
+
+        <button class="btn btn-danger" id="disconnect-btn">Disconnect</button>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
